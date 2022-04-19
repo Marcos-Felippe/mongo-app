@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../components/head'); %>
+    <title>About</title>
+</head>
+<body class="container">
+
+    <header>
+        <%- include('../components/header', {sel1:'false', sel2:'false',sel3:'true'}); %>
+    </header>
+    
+    <main id="main">
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="jumbotron shadow">
+                    <h1 class="text-center">About</h1><br/>
+                    <p>This is a project made using NodeJS with the package Express, database MongoDB and simple front-end using EJS-HTML, CSS and Bootstrap.</p>
+                    <p>I'm just a programmer showing one of my first projects.</p>
+                    <p>Thanks for coming!</p>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="well">
+                    <h4>See more here -> </h4>
+                </div>
+            </div>
+
+        </div>
+        
+    </main>
+
+    <header>
+        <%- include('../components/footer'); %>
+    </header>
+
+</body>
+</html>

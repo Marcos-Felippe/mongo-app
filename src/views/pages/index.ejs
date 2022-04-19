@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../components/head'); %>
+    <title><%= title %></title>
+</head>
+<body class="container ">
+
+    <header>
+        <%- include('../components/header', {sel1:'true', sel2:'false', sel3:'false'}); %>
+    </header>
+
+    <main id="main">
+        <div class="jumbotron shadow-lg">
+            <h1 class="text-center">Animals List with MongoDB</h1>
+            <p>Welcome to Animals List</p>
+            <br/>
+            <h2>List:</h2>
+            <p>The animals on the list are:</p>
+            <ul>
+                <% animals.forEach(function(animals) { %>
+                    <li>
+                        <strong><%= animals.name %></strong>
+                        is a <%= animals.type %> animal %>
+
+                        <a href="/update/<%= animals._id %>" role="button" id ="btn_index_u" class="btn btn-primary">
+                            Update
+                        </a>
+                        <a href="/delete/<%= animals._id %>" role="button" id ="btn_index_d" class="btn btn-danger" onclick="return confirm('<%= text %><%= animals.name %>?');">
+                            Delete
+                        </a>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
+    </main>
+
+    <header>
+        <%- include('../components/footer'); %>
+    </header>
+
+</body>
+</html>
